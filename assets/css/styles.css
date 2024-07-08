@@ -1,0 +1,880 @@
+/*  PALETA CORES BASE
+.color1 { color: #cf62b4; }
+.color2 { color: #db7bc7; }
+.color3 { color: #e794da; }
+.color4 { color: #f3adec; }
+.color5 { color: #ffc6ff;} */
+
+/* font-family: "Playwrite US Trad", cursive; */
+
+:root{
+    --cor-principal : #cf62b4;
+    --cor-secundaria: #db7bc7;
+    --cor-terciaria: #ffc6ff;
+
+    --text-white: #f2f2f2;
+    --text-black: #121212;
+
+    --color-gray-1: #8d8c8c;
+    --color-gray-2: #8c8c8c;
+    
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100vw;
+    height: 80px;
+    background-color: var(--cor-principal);
+    position: fixed;
+    z-index: 10000;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95vw;
+    margin: 0 auto;
+    
+}
+
+a{
+    text-decoration: none;
+    transition: 0.3 ease-in;
+    color: var(--text-white);
+}
+
+
+section{
+    width: 100vw;
+    max-width: 1920px;
+    /* height: calc(100vh - 80px);  */
+    padding-top: 80px;
+}
+
+h1{
+    font-size: 3rem;
+    font-family: "Raleway", sans-serif;
+    color: var(--text-black);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    transform: scaleY(2);
+    
+}
+
+h2{
+    font-size: 2.25rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+main img{
+    width: 100%;
+}
+
+.btn{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    max-width: fit-content;
+    padding: 40px 40px;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.125rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    border: none;
+    
+}
+
+.btn span{
+    z-index: 999;
+}
+
+.btn-primary{
+    background-color: var(--text-black);
+    color: var(--cor-principal);
+    position: relative;
+    overflow: hidden;
+    /* transition: 0.5 ease-in; */
+}
+
+.btn-primary::before{
+    content: " ";
+    background-color: var(--cor-terciaria);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    color: var(--cor-principal);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in;
+}
+
+.btn-primary:hover::before{
+    transform: translateX(0);
+}
+
+.btn-second{
+    background-color: var(--cor-principal);
+    color: var(--text-black);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-second:hover{
+    color: var(--cor-principal);
+}
+
+.btn-second::before{
+    content: " ";
+    background-color: #303030;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in;
+}
+
+.btn-second:hover::before{
+    transform: translateX(0);
+    color: var(--cor-principal);
+}
+
+.container{
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+footer{
+    height: 450px;
+    background-color: var(--text-black);
+    display: flex;
+}
+
+footer .container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    color: var(--color-gray-1); 
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    
+
+}
+
+.footer-content div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-gray-1);
+    
+}
+
+.footer-content div:last-child{
+    flex-flow: row nowrap;
+    gap: 10px;
+    font-size: 2rem;
+    align-self: flex-end;
+}
+
+.footer-content span{
+    font-size: 1.5rem;
+}
+
+.footer-content p{
+    font-size: 1.125rem;
+}
+
+.footer-content ul{
+    list-style: none;
+}
+
+.footer-content span, .footer-content p, .footer-content a, .footer-content i{
+    color: var(--color-gray-1);
+}
+
+/* ******************************************************************************** */
+/* ******************************************************************************** */
+/* ******************************************************************************** */
+
+.brand{
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    z-index: 999;
+}
+
+.brand a{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 20px;
+    text-transform: uppercase;
+}
+
+.btn-mobile{
+    display: none;
+}
+
+.nav-list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    font-weight: 500;
+    letter-spacing: 3px;
+    
+}
+
+#hero{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 20px;
+    background-image: url("../img/capa1.webp");
+    background-size: contain;
+    background-position: right top;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    /* height: 768px; */
+}
+
+
+#hero > div{
+    width: 50%
+}
+
+.box-headline{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 0;
+    height: 100%;
+}
+
+.box-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.box-headline img{
+    width: 100%;
+    max-width: 100px;
+}
+
+.box-headline > p{
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    text-align: center;
+    color: #444444;
+}
+
+.box-content-right{
+    display: flex;
+}
+
+.box-content-right img{
+    width: 100%;
+}
+
+
+/* ******************************************************************************** */
+/* ******************************************************************************** */
+/* ******************************************************************************** */
+
+
+#about > .container{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+
+}
+
+#about > .container > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 50%;
+
+}
+
+#about > .container > div:last-child{
+    align-items: end;
+}
+
+.about-content p{
+    font-size: 1rem;
+    padding: 10px 0;
+    text-indent: 50px;
+    
+}
+
+.about-content > img{
+    min-width: 500px; 
+}
+
+
+/* ******************************************************************************** */
+/* ******************************************************************************** */
+/* ******************************************************************************** */
+
+
+#services{
+    background-color: var(--text-black);
+    color: var(--color-gray-2);
+}
+
+#services > .container{
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cards{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 40px;
+}
+
+.card-line{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 40px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 40px 20px;
+    border: 1px solid var(--cor-principal);
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px var(--cor-principal);
+}
+
+#services .card > div{
+    align-self: center;
+    background-color: var(--cor-principal);
+}
+
+.card > h2{
+    color: var(--cor-principal);
+    transform: scaleY(2);
+}
+
+
+/* ******************************************************************************** */
+/* ******************************************************************************** */
+/* ******************************************************************************** */
+
+
+.motivation{
+    background-image: url("../img/mesa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 150px;
+}
+
+.motivation div{
+    background-image: url("../img/bg-motivation.png");
+    background-repeat: repeat;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.motivation h3{
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+    text-align: center;
+    color: var(--text-white);
+}
+
+
+/* ******************************************************************************** */
+/* ******************************************************************************** */
+/* ******************************************************************************** */
+
+#testimony .container{
+    flex-direction: column;
+    gap: 20px;
+}
+
+#testimony .content{
+    display: flex;
+    flex-direction: column;
+}
+
+.testimony-cards{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.testimony-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    width: 33%;
+}
+
+.testimony-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--color-gray-2);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px var(--color-gray-2);
+}
+
+.testimony-assessment{
+    align-self: flex-end;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    gap: 10px;
+    font-size: 1.5rem;
+    color: var(--cor-secundaria);
+}
+
+.testimony-social{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+    
+}
+
+.testimony-social a{
+    font-size: 1.5rem;
+    color: #f3adec;
+    transition: transform 0.1s ease-in;
+}
+
+.testimony-social a:hover{
+    transform: scale(1.5);
+
+}
+
+.avatar-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #d5d5d5;
+}
+
+.avatar-content h4{
+    color: var(--color-gray-1);
+}
+
+.avatar-content span{
+    font-size: 0.875rem;
+}
+
+.avatar-content img{
+    max-width: 115px;
+}
+
+.testimony-content img{
+    max-width: 50px;
+}
+
+/* ******************************************************************************** */
+/* ******************************************************************************** */
+/* ******************************************************************************** */
+
+#contact .container{
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#contact .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+#contact .content form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding-top: 20px;
+}
+
+#contact .content form label{
+    font-size: 1.125rem;
+    color: var(--cor-secundaria) ;
+}
+
+#contact .content form input, #contact .content form textarea{
+    font-size: 1.125rem;
+    color: var(--cor-secundaria) ;
+    padding: 20px;
+    border: none;
+    outline: 1px solid var(--cor-secundaria);
+    border-radius: 20px;
+    transition: outline-width 0.3s ease-in-out, outline-color 0.3s ease-in-out;
+
+    
+}
+
+#contact .content form input:focus, #contact .content form textarea:focus{
+    font-size: 1.125rem;
+    outline-width: 3px;
+    outline-color: var(--cor-secundaria);
+}
+
+#contact .content form input::placeholder{
+    font-size: 0.875rem;
+    transition: font-size 0.3s ease-in-out;
+    color: var(--cor-secundaria);
+    letter-spacing: 1px;
+}
+
+#contact .content form input:focus::placeholder{
+    font-size: 1.125rem;
+}
+
+#contact img{
+    max-width: 550px;
+}
+
+
+@media screen and (max-width:1366px){
+    
+    h1{
+        font-size: 2.25rem;
+        font-family: "Raleway", sans-serif;
+        color: var(--text-black);
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+    
+    h2{
+        font-size: 1.875rem;
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+
+    .container{
+        display: flex;
+        max-width: 1200px;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+    
+    #hero{
+        background-image: url("../img/capa1366x768.webp");
+    }
+
+    #about > .container > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+        width: 50%;
+    
+    }
+
+    .about-content p{
+        font-size: 0.875rem;
+        padding: 10px 0;
+        letter-spacing: 1px;
+        text-indent: 15px;
+
+        
+    }
+
+
+    .about-content img{
+        width: 50px;         
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    
+
+    #hero{
+        background-image: none;
+    }
+    
+    #hero div{
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .container{
+        display: flex;
+        max-width: 992px;
+        margin: 0 auto;
+    }
+
+
+    #about .container{
+        padding-bottom: 20px;
+        
+    }
+
+    
+}
+
+
+@media screen and (max-width: 768px){
+
+    h1{
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+
+    .btn-mobile{
+        display: block;
+         color: var(--text-white);
+    }
+
+    .nav-list{
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        right: 0;
+        top: 79px;
+        background-color: var(--cor-principal);
+        width: 100vw;
+        height: 100vh;
+        transition: transform 1s ease-in-out;
+        transform: translateY(-200%);
+    }
+
+    .nav-list.active{
+        transform: translateY(0);
+    }
+
+    .nav-item{
+        opacity: 0;
+      
+       
+    }
+
+    @keyframes navItemAnimate {
+        from{
+            opacity: 0;
+            
+        }
+        to{
+            opacity: 1;
+         
+        }
+    }
+
+    #hero div{
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    #about .container{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        position: relative;
+    
+    }
+
+    #about > .container > div{
+        width: 100%;
+    
+    }
+
+    #about > .container > div:last-child{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -999;
+        opacity: 0.3;
+    
+    }
+
+    .card-line{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 40px;
+    }
+
+   
+
+    .testimony-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 20px;
+        padding: 20px;
+        width: 50%;
+    }
+    
+
+
+
+   
+}
+
+@media screen and (max-width: 576px){
+
+    h1{
+        font-size: 1.5rem;
+        font-family: "Raleway", sans-serif;
+        color: var(--text-black);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transform: scaleY(2);
+        
+    }
+    
+    h2{
+        font-size: 1.125rem;
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+
+
+    .btn{
+        padding: 20px 10px;
+        font-size: 1rem;
+        max-width: 100%;
+        font-size: 0.875rem;
+        letter-spacing: normal;
+    }
+
+
+
+    .container{
+        display: flex;
+        width: 100vw;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+
+    #hero{
+        height: auto;
+    }
+
+    #hero > div{
+        padding-top: 10px;
+    }
+
+    #testimony .content div:last-child{
+        font-size: 0.875rem;
+        margin-top: 20px;
+        
+    }
+
+    .card-line .card p{
+        font-size: 0.875rem;
+    }
+
+    .motivation{
+        padding: 0;
+    }
+    
+    .motivation div{
+        background-image: url("../img/bg-motivation.png");
+        background-repeat: repeat;
+        padding: 30px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .testimony-card{
+        width: 100%;
+        padding: 0;
+        p{
+            font-size: 0.875rem;
+        }
+    }
+
+    #contact img{
+        display: none;
+    }
+
+    #contact .content{
+        width: 100%;
+    }
+
+    footer{
+        margin-top: 20px;
+    }
+
+    .footer-content{
+        display: flex;
+        flex-flow: row wrap;   
+    }
+}
+
